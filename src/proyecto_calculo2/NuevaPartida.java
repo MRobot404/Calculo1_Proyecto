@@ -26,6 +26,7 @@ public class NuevaPartida extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jLabel1.setText("Nombre:");
 
@@ -185,7 +186,7 @@ public NuevaPartida() {
             int nivel = 0;
             String name = nombre;
             int vidas = (10);
-            NewMain.players.add(new Jugadores(name, id, nivel, vidas));
+            NewMain.players.add(new Jugadores(nombre, id, nivel, vidas));
             JOptionPane.showMessageDialog(this, "Datos cargados exitosamente, bienvenido");
             NombreField.setText("");
             ExportarCSV(players);
